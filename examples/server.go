@@ -7,8 +7,8 @@ import (
 	"log"
 
 	"github.com/paypal/gatt"
-	"github.com/paypal/gatt/examples/option"
-	"github.com/paypal/gatt/examples/service"
+	"gatt/examples/option"
+	"gatt/examples/service"
 )
 
 func main() {
