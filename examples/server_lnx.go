@@ -21,7 +21,7 @@ var (
 	mc    = flag.Int("mc", 1, "Maximum concurrent connections")
 	id    = flag.Duration("id", 0, "ibeacon duration")
 	ii    = flag.Duration("ii", 5*time.Second, "ibeacon interval")
-	name  = flag.String("name", "Gopher", "Device Name")
+	name  = flag.String("name", "ABBOTT", "Device Name")
 	chmap = flag.Int("chmap", 0x7, "Advertising channel map")
 	dev   = flag.Int("dev", -1, "HCI device ID")
 	chk   = flag.Bool("chk", true, "Check device LE support")

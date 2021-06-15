@@ -30,22 +30,23 @@ func main() {
 		case gatt.StatePoweredOn:
 			// Setup GAP and GATT services for Linux implementation.
 			// OS X doesn't export the access of these services.
-			d.AddService(service.NewGapService("Gopher")) // no effect on OS X
-			d.AddService(service.NewGattService())        // no effect on OS X
+			//d.AddService(service.NewGapService("Gopher")) // no effect on OS X
+			//d.AddService(service.NewGattService())        // no effect on OS X
 
 			// A simple count service for demo.
 			s1 := service.NewCountService()
 			d.AddService(s1)
 
 			// A fake battery service for demo.
-			s2 := service.NewBatteryService()
-			d.AddService(s2)
+			//s2 := service.NewBatteryService()
+			//d.AddService(s2)
 
 			// Advertise device name and service's UUIDs.
-			d.AdvertiseNameAndServices("Gopher", []gatt.UUID{s1.UUID(), s2.UUID()})
+                        log.Println(s1.UUID())
+			d.AdvertiseNameAndServices("ABBOTT3MH000GUR5W", []gatt.UUID{s1.UUID()})
 
 			// Advertise as an OpenBeacon iBeacon
-			d.AdvertiseIBeacon(gatt.MustParseUUID("AA6062F098CA42118EC4193EB73CCEB6"), 1, 2, -59)
+			//d.AdvertiseIBeacon(gatt.MustParseUUID("0000fde3-0000-1000-8000-00805f9b34fb"), 1, 2, -59)
 
 		default:
 		}
