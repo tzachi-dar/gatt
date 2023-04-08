@@ -4,23 +4,23 @@
 ### Build and run the examples on a raspberry pi
 
 
-sudo apt-get install golang -y
-mkdir go
-mkdir go/src
-cd go/src/
+sudo apt-get install golang -y  
+mkdir go  
+mkdir go/src  
+cd go/src/  
 
-git clone https://github.com/tzachi-dar/gatt.git
+git clone https://github.com/tzachi-dar/gatt.git  
 
-mkdir -p github.com/paypal
-cd github.com/paypal 
-git clone https://github.com/paypal/gatt
-cd ../../gatt
+mkdir -p github.com/paypal  
+cd github.com/paypal   
+git clone https://github.com/paypal/gatt  
+cd ../../gatt  
 
 
-# Build the sample server.
-go build examples/server.go
-# Start the sample server.
-sudo ./server
+# Build the sample server.  
+go build examples/server.go  
+# Start the sample server.  
+sudo ./server  
 
 make sure you run this program from a place that the shell will not be 
 killed with time (for example using VNC).
