@@ -32,7 +32,7 @@ func fromInts(data  []int) string {
 
 
 func readData() []string {
-    file, err := os.Open("/home/pi/gatt/data.txt")
+    file, err := os.Open("data.txt")
     if err != nil {
         log.Fatal(err)
     }
@@ -113,6 +113,7 @@ func NewCountService() *gatt.Service {
                                 fmt.Fprintf(n, ss)
                                 fmt.Fprintf(n, string(data[20:38]))
                                 fmt.Fprintf(n, string(data[38:46]))
+				log.Println("Writing data")
  
 				cnt++
 				time.Sleep(time.Second * 60)
